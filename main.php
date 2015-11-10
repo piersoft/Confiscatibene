@@ -41,7 +41,7 @@ function start($telegram,$update)
 	$today = date("Y-m-d H:i:s");
 
 	if ($text == "/start") {
-		$reply = "Benvenuto. Per ricercare un bene immobile confiscato alla Mafia, clicca sulla graffetta (📎) e poi 'posizione' oppure digita il nome del Comune. Verrà interrogato il Dataset 'Lista completa dei beni immobili - ANBSC' realizzato da ConfiscatBene.it su base dati ANBSC ,utilizzabile con licenza CC-BY 4.0 e verranno elencati i beni immobili confiscati alla Mafia. In qualsiasi momento scrivendo /start ti ripeterò questo messaggio di benvenuto.\nQuesto bot è stato realizzato da @piersoft e il codice sorgente per libero riuso. La propria posizione viene ricercata grazie al geocoder di openStreetMap con Lic. odbl.";
+		$reply = "Benvenuto. Per ricercare un bene immobile confiscato alla Mafia, clicca sulla graffetta (📎) e poi 'posizione' oppure digita il nome del Comune. Verrà interrogato il Dataset 'Lista completa dei beni immobili - ANBSC' realizzato da ConfiscatBene.it su base dati ANBSC ,utilizzabile con licenza CC-BY 4.0 e verranno elencati i beni immobili confiscati alla Mafia. In qualsiasi momento scrivendo /start ti ripeterò questo messaggio di benvenuto.\nQuesto bot è stato realizzato da @piersoft con rilascio del codice sorgente per libero riuso. La propria posizione viene ricercata grazie al geocoder di openStreetMap con Lic. odbl.";
 		$content = array('chat_id' => $chat_id, 'text' => $reply,'disable_web_page_preview'=>true);
 		$telegram->sendMessage($content);
 		$log=$today. ";new chat started;" .$chat_id. "\n";
